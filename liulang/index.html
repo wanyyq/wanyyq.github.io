@@ -1,44 +1,130 @@
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>浏览器主页</title>
-    <!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+    <title>new key Page-欢迎使用</title>
     <style>
-        *{
-            padding: 0;
-            margin: 0;
-            font-family: "宋体";
+        body {
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            background-color:white
+            color: black;
+            font-family: Roboto, sans-serif;
+            font-size: 16pt;
         }
-        header{
-            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(ttps://tse4-mm.cn.bing.net/th/id/OIP-C.91cS4RFL6a1opebPZH_2vQHaFj?w=178&h=180&c=7&r=0&o=5&pid=1.7);
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
+
+        h1 {
+            font-family: Anonymice Nerd Font, monospace;
+            font-weight: normal;
+            text-align: center;
+            margin-top: 50px;
         }
-        .title{
-            position: absolute;
-            top:1%;
-            left:50%;
-            transform: translate(-50%,1%);
+        h7 {
+            font-family: Anonymice Nerd Font, monospace;
+            font-weight: normal;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .card {
+            width: 250px;
+            margin: 20px 20px 20px 20px;
+            border-radius: 5px;
+            background-color: rgba(255,255,255,.15);
+            font-family: Roboto Condensed, sans-serif;
+            box-shadow: 0 0 5px rgba(0,0,0,.5);
+        }
+
+        .card img {
+            border-radius: 5px 5px 0 0;
+            width: 250px;
+        }
+
+        .card p {
+            padding: 5px 5px 10px 5px;
+            margin: 0 0 0 0;
+            text-align: center;
+        }
+
+        .cardContainer {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1160px;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        a {
+            outline: 0;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        #bingcomsearch {
+            max-width: 1100px;
+            width: 100%;
+            margin: auto;
+            display: block;
+        }
+        
+        iframe {
+            width: 500px;
+            height: 400px;
+            margin: auto;
+            display: flex;
+        }
+        
+        .framecontainer {
+            display: flex;
+            margin: auto;
+            width: 1160px;
+            flex-wrap: wrap;
         }
     </style>
-    <script language="javascript">    
-        function ok(){    
-         var a=document.getElementById("test").value; 
-        }
-     </script>
 </head>
 <body>
-    <h2>key浏览器-主页</h2>
-    <div class="title">
-        <form name ="test">
-        <input type="text" name="name" id="test" /> 
-        <input type="button" name="button" value="查询" onclick="ok()" />
+    <h1>欢迎</h1>
+    <form action="http://cn.bing.com/search?" class="searchform" method="get" name="searchform">
+        <input id="Bingcomsearch" autocomplete="on" class="form-controls search" name="q" placeholder="输入内容并按回车搜索" required="required"  type="text" autofocus />
+    </form>
+
+    <div class="cardContainer">
+        <a target="_blank" href="https://wanyyq.github.io/liulang/">
+            <div class="card">
+                <img src="img/nextcloud.png">
+                <p>thisPage</p>
+            </div>
+        </a>
+        <a target="_blank" href="https://www.bilibili.com/">
+            <div class="card">
+                <img src="img/bilibi.png">
+                <p>bilibili</p>
+            </div>
+        </a>
+        <a target="_blank" href="https://amazon.it">
+            <div class="card">
+                <img src="img/amazon.png">
+                <p>Amazon</p>
+            </div>
+        </a>
+        <a target="_blank" href="https://github.com">
+            <div class="card">
+                <img src="img/github.png">
+                <p>GitHub</p>
+            </div>
+        </a>
     </div>
-    <iframe src="https://cn.bing.com/" name="iframe_a" height="600" width=99%" title="Iframe 示例"></iframe>
-    <p><a href="https://cn.bing.com/" target="iframe_a">返回Bing主页</a>|||<a href="https://wanyyq.github.io/liulang/" target="iframe_a">返回浏览器主页</a>|||<a href="https://home.code-nav.cn/" target="iframe_a">使用三方浏览器(https://home.code-nav.cn/)</a></p>
+
+	<button onclick="(()=>{
+		document.getElementsByTagName('iframe')[0].src=document.getElementsByTagName('iframe')[0].src;
+		 document.getElementsByTagName('iframe')[1].src=document.getElementsByTagName('iframe')[1].src;
+	})()" style="font-size: 25px; display: block; margin: auto;">
+		🔄
+	</button>
+	<script>
+        setTimeout(function() {
+            document.getElementById("bingcomsearch").focus();
+        }, 0);
+    </script>
+    <h7>申明:本页参考了github资源以及部分文章,以及ChatGPT生成部分代码!</h7>
 </body>
-</html>
+<html>
