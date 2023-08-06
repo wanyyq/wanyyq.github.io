@@ -1,0 +1,154 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>keyWeb首页-欢迎</title>
+    <style>
+        body {
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            background-color:white
+            color: black;
+            font-family: Roboto, sans-serif;
+            font-size: 16pt;
+        }
+
+        h2 {
+            font-family: Anonymice Nerd Font, monospace;
+            font-weight: normal;
+            text-align: center;
+            margin-top: 40px;
+        }
+        h6 {
+            font-family: Anonymice Nerd Font, monospace;
+            font-weight: normal;
+            text-align: center;
+            margin-top: 5px;
+        }
+        h7 {
+            font-family: Anonymice Nerd Font, monospace;
+            font-weight: normal;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .card {
+            width: 250px;
+            margin: 20px 20px 20px 20px;
+            border-radius: 5px;
+            background-color: rgba(255,255,255,.15);
+            font-family: Roboto Condensed, sans-serif;
+            box-shadow: 0 0 5px rgba(0,0,0,.5);
+        }
+        .cards {
+            width: 250px;
+            margin: 20px 20px 20px 20px;
+            border-radius: 5px;
+            background-color: rgba(255,255,255,.15);
+            font-family: Roboto Condensed, sans-serif;
+            box-shadow: 0 0 5px rgba(0,0,0,.5);
+        }
+        .card img {
+            border-radius: 5px 5px 0 0;
+            width: 250px;
+        }
+
+        .card p {
+            padding: 5px 5px 10px 5px;
+            margin: 0 0 0 0;
+            text-align: center;
+        }
+
+        .cardContainer {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1160px;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        a {
+            outline: 0;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        #bingcomsearch {
+            max-width: 1100px;
+            width: 100%;
+            margin: auto;
+            display: block;
+        }
+        
+        iframe {
+            width: 500px;
+            height: 400px;
+            margin: auto;
+            display: flex;
+        }
+        
+        .framecontainer {
+            display: flex;
+            margin: auto;
+            width: 1160px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    var i=0;
+    function myDate(){
+        var now=new Date();
+        var year=now.getFullYear();
+        var month=now.getMonth()+1;
+        var day=now.getDate();
+        var hours=now.getHours();
+        var minutes=now.getMinutes();
+        var seconds=now.getSeconds();
+ 
+        document.getElementById("div").innerHTML=year+"年"+month+"月"+day+"日"+hours+"："+minutes+"："+seconds;
+    }
+    setInterval(myDate,1000);
+
+</script>
+    <h2>
+<div id="div"></div>欢迎~~~</h2>
+    <form action="http://cn.bing.com/search?" class="searchform" method="get" name="searchform">
+        <input id="Bingcomsearch" autocomplete="on" class="form-controls search" name="q" placeholder="输入内容并按回车搜索-当前为Bing搜索" required="required"  type="text" autofocus />
+    </form>
+
+    <div class="cardContainer">
+        <a target="_blank" href="https://wanyyq.github.io/liulang/">
+            <div class="card">
+                <img src="img/netflix.png">
+                <p>新建网页</p>
+            </div>
+        </a>
+        <a href="https://wanyyq.github.io/liulang/">
+            <div class="card">
+                <img src="img/github.png">
+                <p>此入口已关闭</p>
+            </div>
+        </a>
+        <a target="_blank" href="https://wanyyq.github.io/liulang/news">
+            <div class="card">
+                <img src="img/nextcloud.png">
+                <p>本页信息</p>
+            </div>
+        </a>
+        <a target="_blank" href="https://wanyyq.github.io/liulang/inter">
+            <div class="card">
+                <img src="img/gplus.png">
+                <p>常用网站</p>
+            </div>
+        </a>
+    </div>
+	<script>
+        setTimeout(function() {
+            document.getElementById("bingcomsearch").focus();
+        }, 0);
+    </script>
+    <h6>申明:本页参考了github资源以及部分文章,以及ChatGPT生成部分代码!</h6>
+</body>
+<html>
