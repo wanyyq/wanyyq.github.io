@@ -13,7 +13,8 @@
             font-family: "宋体";
         }
         header{
-            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://ts1.cn.mm.bing.net/th/id/R-C.34ed538c8acba8be8b60accbad0b20f1?rik=CEEdozdXAdMOuw&riu=http%3a%2f%2fi1.img.969g.com%2fdown%2fimgx2014%2f12%2f22%2f289_093448_81ea8.jpg&ehk=OYBUuK5MsmiDsIm%2biSARVx%2bD4KBQ10zBEZ4LF6OTIw8%3d&risl=&pid=ImgRaw&r=0);
+            
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://ts1.cn.mm.bing.net/th/id/R-C.59bceb337cc052f02c2e7d32bbadef2c?rik=uFV%2bZu%2beYPFBRg&riu=http%3a%2f%2fimg.sj33.cn%2fuploads%2fallimg%2f200912%2f20091223150228509.jpg&ehk=mzfRVDFqYW4BvWA6BxTa63nDZjlLRTumgV62WVyBzUA%3d&risl=&pid=ImgRaw&r=0);
             height: 100vh;
             background-size: cover;
             background-position: center;
@@ -63,12 +64,24 @@
             top:70%;
             transform: translate(-45%,-70%);
         }
+        .loudbutton{
+            color: #fff;
+            position:absolute;
+            left:40%;
+            top:90%;
+            transform: translate(40%,-70%);
+        }
     </style>
 </head>
-<body>
+<body onselectstart="return false">
     <header>
         <div class="main">
-              <li class="active"><a href="#">For Wang Yiqing</a></li>
+            <ul>
+                <li class="active"><a href="">刷新</a></li>
+                <li><a href="\wangs" target="_blank">个人</a></li>
+                <li><a href="\game" target="_blank">游戏</a></li>
+                <li><a href="\school" target="_blank">学校<span style="color: crimson;">New</span></a></li>
+            </ul>
         </div>
         <div class="title">
             <h1>欢迎</h1>
@@ -76,9 +89,27 @@
         <div id="hello">
             <h3>欢迎来到我的网站,逛逛吧~~~</h3>
             <h4>暂时只开放以下功能!</h4>
-            <h3><a href="\wangs" target="top">个人区</a></h3>
-            <h3><a href="\game" target="top">在线Game</a></h3>
-            <h3><a href="\school" target="top">学校</a></h3>
+            <h3><a href="\wangs" target="top"><span style="color: white;">个人区</span></a></h3>
+            <h3><a href="\game" target="top"><span style="color: white;">在线Game</span></a></h3>
+            <h3><a href="\school" target="top"><span style="color: white;">学校</span></a></h3>
+        </div>
+        <div class="loudbutton">
+	<ul><li><a href="https://wanyyq.github.io/wangs/my/" target="_blank">☏</a></li><li><a href="#" target="_blank">☢</a></li>
+                </ul>
         </div>
     </header>
+    <script type="text/javascript">
+       window.onload=function(){
+            var imgs =["https://ts1.cn.mm.bing.net/th/id/R-C.df4462fabf18edd07195679a5f8a37e5?rik=FnNvr9jWWjHCVQ&riu=http%3a%2f%2fseopic.699pic.com%2fphoto%2f50059%2f8720.jpg_wh1200.jpg&ehk=ofb4q76uCls2S07aIlc8%2bab3H5zwrmj%2bhqiZ%2fyw3Ghw%3d&risl=&pid=ImgRaw&r=0","https://img.zcool.cn/community/01f6dc5a74149ba80120a12366a277.jpg@1280w_1l_2o_100sh.jpg","https://pic1.zhimg.com/v2-e915686432f3bb45dd43705ec445352d_r.jpg","https://img.zcool.cn/community/01c94c563736d66ac7259e0fd89fcb.jpg@2o.jpg","https://ts1.cn.mm.bing.net/th/id/R-C.eec02321ea106169d757f427b98b358d?rik=%2bgK43uKTPrZbCw&riu=http%3a%2f%2f00.minipic.eastday.com%2f20170823%2f20170823152907_d41d8cd98f00b204e9800998ecf8427e_4.jpeg&ehk=FsISayQ5Gjp%2boHXA8OW7nhrZdn2JEzUKk3lfW%2br0P70%3d&risl=&pid=ImgRaw&r=0"];
+            var i =0;
+            var head=document.getElementById("head");
+            head.style.background="url(https://img.zcool.cn/community/01f6dc5a74149ba80120a12366a277.jpg@1280w_1l_2o_100sh.jpg)"; 
+                    function time(){
+                            i++;
+                            i=i%12;
+                            head.style.background="url("+imgs[i]+")";}                                               
+            setInterval(time,5000);
+                    //setInterval()
+            }
+    </script>
 </body>
