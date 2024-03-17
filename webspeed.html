@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>王译庆的网站-网络speed</title>
+<style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: "宋体";
+        }
+        header{
+            background-image:linear-gradient(to right top,#3f8cd9, #d6c2fa);
+            backdrop-filter: blur(6px);
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+    
+        ul{
+            float: right;
+            list-style-type: none;
+            margin: 15px;
+        }
+        ul li{
+            display: inline-block;
+        }
+    
+        ul li a{
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 20px;
+            border: 1px solid transparent;
+            transition: .6s ease;
+            border-radius: 20px;
+        }
+    
+        ul li a:hover{
+            background-color: #fff;
+            color: #000;
+        }
+        ul li.active a{
+            background-color: #fff;
+            color: #000;
+        }
+        .title{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+        .title h1{
+            color: #000000;
+            font-size: 70px;
+            font-family: Century Gothic;
+        }
+        #hello{
+            color: #fff;
+            position:absolute;
+            left:47%;
+            top:50%;
+            transform: translate(-45%,-70%);
+        }
+        #hellos{
+            color: #fff;
+            position:absolute;
+            left:5%;
+            top:5%;
+            transform: translate(-5%,-5%);
+        }
+        .main{
+            background-color: rgba(255, 255, 255, 0.4);
+            position: relative;
+            width: 90%;
+            height: 90%;
+            left:5%;
+            top:5%;
+            box-shadow: 0 5px 15px rgba(20, 20, 20, 0.8);
+            display: flex;
+            border-radius: 10px;
+            align-items: center;
+
+            backdrop-filter: blur(50px);
+        }
+        button{
+	            background-color:#59b941;
+	            color:white;
+	            width: 400px;
+	            height: 45px;
+	            border:0;
+	            font-size: 16px;
+	            box-sizing: content-box;				
+                            border-radius: 5px;
+        }
+        button:hover{
+	            background-color: #37a71b;
+        }
+        .loud{
+            color: #fff;
+            position:absolute;
+            left:30%;
+            top:90%;
+            transform: translate(40%,-70%);
+        }
+</style>
+
+<script>
+
+function displayDate(){
+	var a=navigator.connection;
+	for (var key in a) {
+		console.log(key+":"+a[key]);
+	}
+	document.getElementById("demo1").innerHTML="流量："+a["effectiveType"];
+	document.getElementById("demo2").innerHTML="时延："+a["rrt"];
+	document.getElementById("demo112").innerHTML='网速'+navigator.connection.downlink+'MB/s';
+	document.getElementById("demo4").innerHTML="下载速度："+a["downlink"]+'MB/s';
+}
+
+</script>
+
+</head>
+<body>
+<header>
+
+<div class="main"></div>
+
+<div id="hello">
+<h1>网速测试</h1>
+
+<button onclick="displayDate()">点我网速测试</button>
+<h2 id="demo">网速结果:</h2>
+<p id="demo112">网速：--</p>
+<p id="demo1">流量：--</p>
+<p id="demo2">时延：--</p>
+<p id="demo3">上传速度：--</p>
+<p id="demo4">下载速度：--</p>
+
+
+</div>
+<div class="loud">
+<p>郴州九中-2324</p>
+<p>CopyRight@王译庆</p>
+</div>
+</header>
+</body>
+</html>
