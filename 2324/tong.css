@@ -1,0 +1,142 @@
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: "宋体";
+        }
+        header{
+            background-image:linear-gradient(135deg, #f9f4dc,#f9f4dc);
+            backdrop-filter: blur(6px);
+            height: 500vh;
+
+        }
+        copys{
+            background-image:linear-gradient(135deg, #AAA,#AAA);
+            backdrop-filter: blur(6px);
+            height: 100vh;
+       }
+        copys p{
+            color: #fff;
+            font-size: 15px;
+            font-family: Century Gothic;
+        }    
+        ul{
+            float: right;
+            list-style-type: none;
+            margin: 15px;
+        }
+        ul li{
+            display: inline-block;
+
+        }
+    
+        ul li a{
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 20px;
+            border: 1px solid transparent;
+            transition: .6s ease;
+            border-radius: 20px;
+        }
+    
+        ul li a:hover{
+            background-color: #f9f4dc;
+            color: #000;
+        }
+        ul li.active a{
+            background-color: #fff;
+            color: #000;
+        }
+        .title{
+            position: absolute;
+            top:20px;
+            left:20px;
+        }
+        .title h1{
+            color: #ffca18;
+            font-size: 50px;
+            font-family: Century Gothic;
+        }
+        .title h6{
+            color: #ffca18;
+            font-size: 25px;
+        }
+        #hello{
+            color: #fff;
+            position:absolute;
+            left:45%;
+            top:70%;
+            transform: translate(-45%,-70%);
+        }
+        .loudbutton{
+            color: #fff;
+            position: absolute;
+            left:50%;
+            top:90%;
+
+        }
+        .loudbutton p{
+            font-family: 华文新魏;
+        }
+        mains{
+            backdrop-filter: blur(50px);
+        }
+        page2{
+            top:100%;
+            background-image:linear-gradient(to right top,  135deg, #a8e063, #56ab2f);
+            backdrop-filter: blur(6px);
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        .mainpage{
+            position: absolute;
+            top:40%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+        .mainpage iframe {
+            top:50%;
+            left:10%;
+            border: 1px solid black;
+            width: 90%; 
+        }
+        .niceButton{
+            background-color: #ffca18;
+            border: none;
+            border-radius: 6px;
+            color:white;
+            padding: 15px 32px;
+            text-align: left;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            -webkit-transition-duration: 0.4s;
+        }
+        .niceButton:hover{
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,.24),
+            0 17px 50px 0 rgba(0,0,0,.19);
+        }
+        .cardContainer {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1160px;
+            margin: auto;
+            margin-top: 10px;
+        }
+        .card {
+            width: 250px;
+            margin: 20px 20px 20px 20px;
+            border-radius: 5px;
+            background-color: rgba(225,225,225,.15);
+            font-family: Roboto Condensed, sans-serif;
+            box-shadow: 0 0 5px rgba(0,0,0,.5);
+        }
+
+        .card p {
+            padding: 5px 5px 10px 5px;
+            margin: 0 0 0 0;
+            text-align: center;
+        }
