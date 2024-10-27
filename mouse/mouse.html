@@ -7,6 +7,7 @@
     <title>纪念鼠鼠</title>
     <style>
         *{
+            color:#24305e;
             padding: 0;
             margin: 0;
             background-image:linear-gradient(#baccd9, #baccd9);
@@ -35,21 +36,24 @@
            border-radius: 8px;box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
         }
         .number{
+           font-size:80px;
+           color:#f76c6c;
            font-family: 'nums', sans-serif;
            background-image:linear-gradient(#f0f5e5, #f0f5e5);
 
         }
         .big{
-           background-image:linear-gradient(#fcc307, #fcc307);
+           font-size:30px;
+           color:#f8e9a1;
+           background-image:linear-gradient(#fc6c6c, #fc6c6c);
         }
     </style>
 </head>
 <body>
-  <h1 align="center">鼠鼠日历</h1>
-  <h3 align="center">老鼠!想你了</h3>
+  <h1 align="center">老鼠日历</h1>
   <div class = "mains">
       </br>
-      <h2 class = "big">纪念鼠鼠</h1>
+      <h2 class = "big">今天是纪念鼠鼠</h1>
       </br>   
       </br>
       </br>
@@ -61,8 +65,8 @@
       const currentDate = new Date();
       const targetDate = new Date('2024-08-31');
       const timeDifference = currentDate.getTime() - targetDate.getTime();
-      const daysPassed = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-      document.getElementById("result").innerHTML ="第 " + daysPassed + " 天";
+      const daysPassed = Math.floor(timeDifference / (1000 * 60 * 60 * 24)+1);
+      document.getElementById("result").innerHTML =daysPassed;
   </script>
 </body>
 </html>
