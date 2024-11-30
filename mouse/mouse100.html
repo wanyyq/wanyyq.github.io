@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>纪念鼠鼠100天</title>
+    <style>
+        *{
+            color:#24305e;
+            padding: 0;
+            margin: 0;
+            background-image:linear-gradient(#baccd9, #baccd9);
+        }
+        @font-face {
+            font-family: 'nums';
+            src: url('circle.ttf') format('truetype');
+        }
+        .main{
+            text-align: center;
+        }
+        .mains{
+           text-align: center; /*让div内部文字居中*/
+           background-color: #fff;
+           border-radius: 20px;
+           width: 300px;
+           height: 420px;
+           margin: auto;
+           position: absolute;
+           top: 0;           
+           left: 0;
+           right: 0;
+           bottom: 0;
+           backdrop-filter: blur(6px);
+           background-image:linear-gradient(#f0f5e5, #f0f5e5);
+           border-radius: 8px;box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+        .number{
+           font-size:80px;
+           color:#f76c6c;
+           font-family: 'nums', sans-serif;
+           background-image:linear-gradient(#f0f5e5, #f0f5e5);
+
+        }
+        .small{
+           font-size:20px;
+           color:#f76c6c;
+           font-family: 'nums', sans-serif;
+           background-image:linear-gradient(#f0f5e5, #f0f5e5);
+        }
+        .big{
+           font-size:30px;
+           color:#f8e9a1;
+           background-image:linear-gradient(#fc6c6c, #fc6c6c);
+        }
+    </style>
+</head>
+<body>
+  <h1 align="center">老鼠百日纪念日历</h1>
+  <div class = "mains">
+      </br>
+      <h2 class = "big">距离老鼠100天</h1>
+      </br>
+      剩余<div id="result" class="number">$</div>
+      </br>
+      <h6 id="days" class="small"></h6>
+      </br>
+     <iframe id="bili-radio"
+    src="https://upos-sz-mirrorali.bilivideo.com/upgcxcode/31/67/1224686731/1224686731-1-16.mp4?e=ig8euxZM2rNcNbRVhwdVhwdlhWdVhwdVhoNvNC8BqJIzNbfq9rVEuxTEnE8L5F6VnEsSTx0vkX8fqJeYTj_lta53NCM=&uipk=5&nbs=1&deadline=1732983919&gen=playurlv2&os=alibv&oi=614273852&trid=bae44a48270648fdb9e3823e79f8a6a0h&mid=0&platform=html5&og=hw&upsig=b444b04754ecf2121e0a51844ce4c8ae&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,mid,platform,og&bvc=vod&nettype=0&f=h_0_0&bw=51202&logo=80000000"
+    scrolling="no" border="0" frameborder="no" framespacing="0"> </iframe>
+      </div>
+  </div>
+  
+  <script>
+      const currentDate = new Date();
+      const targetDate = new Date('2024-12-08');
+      const timeDifference = targetDate.getTime() - currentDate.getTime() ;
+      const daysPassed = Math.floor(timeDifference / (1000 * 60 * 60 * 24)+1);
+      document.getElementById("result").innerHTML = daysPassed;
+
+      const currentDate2 = new Date();
+      const targetDate2 = new Date('2024-8-31');
+      const timeDifference2 =  currentDate2.getTime() - targetDate2.getTime();
+      const daysPassed2 = Math.floor(timeDifference2 / (1000 * 60 * 60 * 24)+1);
+      document.getElementById("days").innerHTML ="今天是第" + daysPassed2 + "天";
+  </script>
+</body>
+</html>
