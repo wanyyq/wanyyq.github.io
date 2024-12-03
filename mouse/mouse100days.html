@@ -23,7 +23,7 @@
            text-align: center; /*让div内部文字居中*/
            background-color: #fff;
            border-radius: 20px;
-           width: 300px;
+           width: 600px;
            height: 420px;
            margin: auto;
            position: absolute;
@@ -56,36 +56,25 @@
     </style>
 </head>
 <body>
-  <h1 align="center">老鼠百日纪念日历</h1>
+  <h1 align="center">老鼠纪念日历</h1>
   <div class = "mains">
       </br>
-      <h2 class = "big">距离老鼠100天</h1>
+      <h2 class = "big">老鼠，我们想你了</h1>
       </br>
       </br>
-      </br>
-      剩余<div id="result" class="number">$</div>
-      </br>
-      </br>
-      </br>
+      <h6 id="d" class="small">今天，是悲伤的一天</h6>
       <h6 id="days" class="small"></h6>
       </br>
-      </br>
-      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="https://music.163.com/outchain/player?type=2&id=346089&auto=1&height=32"></iframe>
       </div>
   </div>
   
   <script>
-      const currentDate = new Date();
-      const targetDate = new Date('2024-12-08');
-      const timeDifference = targetDate.getTime() - currentDate.getTime() ;
-      const daysPassed = Math.floor(timeDifference / (1000 * 60 * 60 * 24)+1);
-      document.getElementById("result").innerHTML = daysPassed;
 
       const currentDate2 = new Date();
       const targetDate2 = new Date('2024-8-31');
       const timeDifference2 =  currentDate2.getTime() - targetDate2.getTime();
       const daysPassed2 = Math.floor(timeDifference2 / (1000 * 60 * 60 * 24)+1);
-      document.getElementById("days").innerHTML ="今天是第" + daysPassed2 + "天";
+      document.getElementById("days").innerHTML ="今天是纪念老鼠离开我们第100天";
   </script>
 </body>
 </html>
