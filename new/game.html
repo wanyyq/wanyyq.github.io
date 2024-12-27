@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.buttons {
+  position: relative;
+  white-space: nowrap;
+  text-decoration: none;
+  color: inherit;
+  text-align:center;
+}
+.buttons:hover {
+  text-decoration: none;
+}
+.buttons:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 68%;
+  left: -0.1em;
+  right: -0.1em;
+  bottom: 0;
+  transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+  background-color: #0078d7;
+}
+.buttons:hover::after {
+  top: 0%;
+}
+.a2 {
+  background-color: #0078d7;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 17px;
+  box-shadow: #666 0px 0px 6px;
+  border-radius: 8px 8px 8px 8px;
+  width: 150px;
+  height: 30px;
+}
+.a2:active{
+  background-color: #0078d7;
+}
+
+</style>
+</head>
+<body>
+  <h1 class="maintitle" style="text-align:center">小游戏</h1>
+  <h3 class="maintitle" style="text-align:center">你要玩什么呢?</br><a class="buttons" href="./homepage.html">不玩了</a></br>提示：<a class="buttons" href="#">合理放松有益，但别沉迷于此</a></br>游戏来源与网络，作者仅搜集</br>这些游戏仅适用于<a class="buttons" href="#">电脑</a>，手机大部分不支持</h3>
+  <div class="using" style="text-align:center">
+     <h3 style="text-align:center;color:#0078d7">==游戏平台类==</h3>
+     <a class="a2" href="https://yandex.com/games/zh">Yandex Games游戏平台</a></br></br></br>
+     <a class="a2" href="https://poki.com/zh/html5">Poki游戏平台</a>
+     <h3 style="text-align:center;color:#0078d7">==单个游戏类==</h3>
+     <a class="a2" href="https://mc.js.cool/#work">Minecraft在线1.8</a></br></br></br>
+     <a class="a2" href="https://www.geo-fs.com/">Geo-fs飞行模拟器</a></br></br></br>
+     <a class="a2" href="https://poki.com/zh/g/crossy-road">母鸡闯关</a></br></br></br>
+     
+  </div>
+</body>
+</html>

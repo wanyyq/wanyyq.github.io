@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.buttons {
+  position: relative;
+  white-space: nowrap;
+  text-decoration: none;
+  color: inherit;
+  text-align:center;
+}
+.buttons:hover {
+  text-decoration: none;
+}
+.buttons:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 68%;
+  left: -0.1em;
+  right: -0.1em;
+  bottom: 0;
+  transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+  background-color: #0078d7;
+}
+.buttons:hover::after {
+  top: 0%;
+}
+</style>
+</head>
+<body>
+  <h1 class="maintitle" style="text-align:center">你好,</h1>
+  <h3 class="maintitle" style="text-align:center">各位来者,想要如何</h3>
+  <div class="using" style="text-align:center">
+     <a class="buttons" href="#">主页</a></br></br>
+     <a class="buttons" href="./use.html">动态</a></br></br>
+     <a class="buttons" href="./download.html">下载</a></br></br>
+     <a class="buttons" href="./writer.html">作者</a></br></br>
+     
+  </div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 3px;
+  box-shadow:0px 0px 10px 5px #aaa;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+  display: block;
+  left: 40px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  transition: margin-left .5s;
+  color: #0078d7;
+}
+
+.sidebar .closebtn {
+  top: 0;
+  right: 3px;
+  font-size: 15px;
+  margin-left: 2px;
+}
+
+.openbtn {
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #0078d7;
+  color: white;
+  padding: 15px 17px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #1189e8;
+}
+
+#main {
+  transition: margin-left .5s;
+}
+
+.screenmain{
+  height=100%;
+}
+
+#screen{
+  width=100%;
+  hight=100%;
+}
+
+ul {
+    list-style-type: none;
+    border-radius: 8px 8px 8px 8px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow:0px 0px 10px 5px #aaa;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #eee;
+}
+
+/* 在高度小于 450px 的较小屏幕上，更改 sidenav 的样式（更少的填充和更小的字体大小）*/
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="./img/logo.png" width=100px   hight=auto></a>
+  <a onclick="change_main()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主页</a>
+  <a onclick="change_use()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;动态</a>
+  <a onclick="change_down()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下载</a>
+  <a onclick="change_writer()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作者</a>
+  <a onclick="change_vc()">&nbsp;&nbsp;&nbsp;&nbsp;v3.0.0</a>
+</div>
+
+<div id="main" height=100%>
+  <ul>
+    <li> <button class="openbtn" onclick="openNav()">☰ </button></li>
+    <li><a href="#">Wangyq的网站</a></li>
+    <li><a  onclick="change_main()">主页</a></li>
+  </ul>
+     <p> </p>
+     <div class="screen">
+      <iframe id="screenmain" class="screenmain" src="./homepage.html" width="100%" frameborder="no"  height="500">
+        <p>Loading..</p>
+      </iframe>
+    </div>
+</div>
+
+<script>
+var hight=window.innerHeight - 100;
+var h2 = hight.toString();
+document.getElementById("screenmain").height = hight;
+
+function change_main() {
+  document.getElementById("screenmain").src = "./homepage.html";
+}
+
+function change_use() {
+  document.getElementById("screenmain").src = "./use.html";
+}
+
+function change_down() {
+  document.getElementById('screenmain').src = "./download.html";
+}
+
+function change_writer() {
+  document.getElementById('screenmain').src = "./writer.html";
+}
+
+function change_vc() {
+  document.getElementById('screenmain').src = "./banben.html";
+}
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "180px";
+  document.getElementById("main").style.marginLeft = "180px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   
+</body>
+</html> 
+
